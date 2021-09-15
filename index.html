@@ -1,102 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="master.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="master.css" />
     <title>Django Rest Framework</title>
-</head>
-<body>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>DRF Documentation</header>
+      <ul id="nav-list">
+        <li>
+          <a class="nav-link" href="#introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#funding">Funding</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#requirements">Requirements</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#installation">Installation</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#example">Example</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#quickstart">Quickstart</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#development">Development</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#support">Support</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#security">Security</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#license">License</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#reference">Reference</a>
+        </li>
+      </ul>
+    </nav>
     <main id="main-doc">
-        <nav id="navbar">
-            <header>DRY Documentation</header>
-            <ul>
+      <img class="responsive-image" src="images/logo.png" alt="DRF logo" />
+      <section id="introduction" class="main-section">
+        <header>Introduction</header>
+        <article>
+          <p>
+            Django REST framework is a powerful and flexible toolkit for
+            building Web APIs.
+          </p>
+          <p>Some reasons you might want to use REST framework:</p>
+          <ul>
             <li>
-                <a class="nav-link" href="#introduction">Introduction</a>
+              The
+              <a href="https://restframework.herokuapp.com/" class="link"
+                >Web browsable API</a
+              >
+              is a huge usability win for your developers.
             </li>
             <li>
-                <a class="nav-link" href="#funding">Funding</a>
+              <a
+                href="https://www.django-rest-framework.org/api-guide/authentication/"
+                class="link"
+              >
+                Authentication policies
+              </a>
+              including packages for
+              <a
+                href="https://www.django-rest-framework.org/api-guide/authentication/#django-rest-framework-oauth"
+                class="link"
+              >
+                OAuth1a
+              </a>
+              and
+              <a
+                href="https://www.django-rest-framework.org/api-guide/authentication/#django-oauth-toolkit"
+                class="link"
+              >
+                OAuth2</a
+              >.
             </li>
             <li>
-                <a class="nav-link" href="#requirements">Requirements</a>
+              <a
+                href="https://www.django-rest-framework.org/api-guide/serializers/"
+                class="link"
+              >
+                Serialization
+              </a>
+              that supports both
+              <a
+                href="https://www.django-rest-framework.org/api-guide/serializers/#modelserializer"
+                class="link"
+              >
+                ORM
+              </a>
+              and
+              <a
+                href="https://www.django-rest-framework.org/api-guide/serializers/#serializers"
+                class="link"
+              >
+                non-ORM
+              </a>
+              data sources.
             </li>
             <li>
-                <a class="nav-link" href="#installation">Installation</a>
+              Customizable all the way down - just use
+              <a
+                href="https://www.django-rest-framework.org/api-guide/views/#function-based-views"
+                class="link"
+              >
+                regular function-based views
+              </a>
+              if you don't need the more powerful features.
             </li>
             <li>
-                <a class="nav-link" href="#example">Example</a>
+              Extensive documentation, and
+              <a
+                href="https://groups.google.com/g/django-rest-framework"
+                class="link"
+              >
+                great community support</a
+              >.
             </li>
             <li>
-                <a class="nav-link" href="#quickstart">Quickstart</a>
+              Used and trusted by internationally recognised companies including
+              <a href="https://www.mozilla.org/en-US/about/" class="link">
+                Mozilla</a
+              >, <a href="https://www.redhat.com/en" class="link">Red Hat</a>,
+              <a href="https://www.heroku.com/" class="link">Heroku</a>, and
+              <a href="https://www.eventbrite.co.uk/about/" class="link">
+                Eventbrite</a
+              >.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="funding" class="main-section">
+        <header>Funding</header>
+        <article>
+          <p>
+            REST framework is a <em>collaboratively funded project</em>. If you
+            use REST framework commercially we strongly encourage you to invest
+            in its continued development by
+            <a
+              href="https://www.django-rest-framework.org/community/funding/"
+              class="link"
+              ><strong>signing up for a paid plan</strong></a
+            >.
+          </p>
+          <p>
+            <em>
+              Every single sign-up helps us make REST framework long-term
+              financially sustainable.
+            </em>
+          </p>
+          <p>
+            <em>
+              Many thanks to all our wonderful sponsors, and in particular to
+              our premium backers, Sentry, Stream, ESG, Rollbar, Cadre,
+              Kloudless, Lights On Software, Retool, and bit.io.
+            </em>
+          </p>
+        </article>
+      </section>
+      <section id="requirements" class="main-section">
+        <header>Requirements</header>
+        <article>
+          <p>REST framework requires the following:</p>
+          <ul>
+            <li>Python (3.5, 3.6, 3.7, 3.8, 3.9)</li>
+            <li>Django (2.2, 3.0, 3.1, 3.2)</li>
+          </ul>
+          <p>
+            We <strong>highly recommend</strong> and only officially support the
+            latest patch release of each Python and Django series.
+          </p>
+          <p>The following packages are optional:</p>
+          <ul>
+            <li>
+              <a href="https://pypi.org/project/PyYAML/" class="link">PyYAML</a
+              >,
+              <a href="https://pypi.org/project/uritemplate/" class="link">
+                uritemplate
+              </a>
+              (5.1+, 3.0.0+) - Schema generation support.
             </li>
             <li>
-                <a class="nav-link" href="#development">Development</a>
+              <a href="https://pypi.org/project/Markdown/" class="link">
+                Markdown
+              </a>
+              (3.0.0+) - Markdown support for the browsable API.
             </li>
             <li>
-                <a class="nav-link" href="#support">Support</a>
+              <a href="https://pypi.org/project/Pygments/" class="link">
+                Pygments
+              </a>
+              (2.4.0+) - Add syntax highlighting to Markdown processing.
             </li>
             <li>
-                <a class="nav-link" href="#security">Security</a>
+              <a href="https://pypi.org/project/django-filter/" class="link">
+                django-filter
+              </a>
+              (1.0.1+) - Filtering support.
             </li>
             <li>
-                <a class="nav-link" href="#license">License</a>
+              <a
+                href="https://github.com/django-guardian/django-guardian"
+                class="link"
+              >
+                django-guardian
+              </a>
+              (1.1.1+) - Object level permissions support.
             </li>
-            </ul>
-        </nav>
-        <section id="introduction" class="main-section">
-            <header>Introduction</header>
-            <p></p>
-            <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            </ul>
-        </section>
-        <section id="funding" class="main-section">
-            <header>Funding</header>
-            <p></p>
-        </section>
-        <section id="requirements" class="main-section">
-            <header>Requirements</header>
-            <p></p>
-        </section>
-        <section id="installation" class="main-section">
-            <header>Installation</header>
-            <p></p>
-            <code></code>
-            <code></code>
-            <code></code>
-            <code></code>
-        </section>
-        <section id="example" class="main-section">
-            <header>Example</header>
-            <code></code>
-            <code></code>
-            <p></p>
-        </section>
-        <section id="quickstart" class="main-section">
-            <header>Quickstart</header>
-            <p></p>
-        </section>
-        <section id="development" class="main-section">
-            <header>Development</header>
-            <p></p>
-        </section>
-        <section id="support" class="main-section">
-            <header>Support</header>
-            <p></p>
-        </section>
-        <section id="security" class="main-section">
-            <header>Security</header>
-            <p></p>
-        </section>
-        <section id="license" class="main-section">
-            <header>License</header>
-            <p></p>
-        </section>
+          </ul>
+        </article>
+      </section>
+      <section id="installation" class="main-section">
+        <header>Installation</header>
+        <article>
+          <p>
+            Install using <span class="highlight">pip</span>, including any
+            optional packages you want...
+          </p>
+          <code>
+            <pre>
+pip install djangorestframework
+pip install markdown       <span class="comments"># Markdown support for the browsable API.</span>
+pip install django-filter  <span class="comments"># Filtering support</span>
+            </pre>
+          </code>
+          <p>...or clone the project from github.</p>
+          <code>
+            <pre>git clone https://github.com/encode/django-rest-framework</pre>
+          </code>
+          <p>
+            Add <span class="highlight">'rest_framework'</span> to your
+            <span class="highlight">INSTALLED_APPS</span> setting.
+          </p>
+          <code>
+            <pre>
+INSTALLED_APPS = [
+    ...
+    <span class="highlight">'rest_framework'</span>,
+]
+            </pre>
+          </code>
+          <p>
+            If you're intending to use the browsable API you'll probably also
+            want to add REST framework's login and logout views. Add the
+            following to your root <span class="highlight">urls.py</span> file.
+          </p>
+          <code>
+            <pre>
+urlpatterns = [
+    ...
+    path(<span class="highlight">'api-auth/'</span>, include(<span class="highlight">'rest_framework.urls'</span>))
+]
+            </pre>
+          </code>
+          <p>Note that the URL path can be whatever you want.</p>
+        </article>
+      </section>
+      <section id="example" class="main-section">
+        <header>Example</header>
+        <article>
+          <p>
+            Let's take a look at a quick example of using REST framework to
+            build a simple model-backed API.
+          </p>
+          <p>
+            We'll create a read-write API for accessing information on the users
+            of our project.
+          </p>
+          <p>
+            Any global settings for a REST framework API are kept in a single
+            configuration dictionary named
+            <span class="highlight">REST_FRAMEWORK</span>. Start off by adding
+            the following to your
+            <span class="highlight">settings.py</span> module:
+          </p>
+          <code>
+            <pre>
+REST_FRAMEWORK = {
+    <span class="comments"># Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.</span>
+    <span class="highlight">'DEFAULT_PERMISSION_CLASSES'</span>: [
+        <span class="highlight">'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'</span>
+    ]
+}
+            </pre>
+          </code>
+          <p>
+            Don't forget to make sure you've also added
+            <span class="highlight">rest_framework</span> to your
+            <span class="highlight">INSTALLED_APPS</span>.
+          </p>
+          <p>
+            We're ready to create our API now. Here's our project's root
+            <span class="highlight">urls.py</span>
+            module:
+          </p>
+          <code>
+            <pre>
+from django.urls import path, include
+from django.contrib.auth.models import User
+from rest_framework import routers, serializers, viewsets
+
+<span class="comments"># Serializers define the API representation.</span>
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ['url', 'username', 'email', 'is_staff']
+
+<span class="comments"># ViewSets define the view behavior.</span>
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+<span class="comments"># Routers provide an easy way of automatically determining the URL conf.</span>
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+
+<span class="comments"># Wire up our API using automatic URL routing.</span>
+<span class="comments"># Additionally, we include login URLs for the browsable API.</span>
+urlpatterns = [
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+]
+            </pre>
+          </code>
+          <p>
+            You can now open the API in your browser at
+            <a href="http://127.0.0.1:8000/" class="link"
+              >http://127.0.0.1:8000/</a
+            >, and view your new 'users' API. If you use the login control in
+            the top right corner you'll also be able to add, create and delete
+            users from the system.
+          </p>
+        </article>
+      </section>
+      <section id="quickstart" class="main-section">
+        <header>Quickstart</header>
+        <article>
+          <p>
+            Can't wait to get started? The
+            <a
+              href="https://www.django-rest-framework.org/tutorial/quickstart/"
+              class="link"
+              >quickstart guide</a
+            >
+            is the fastest way to get up and running, and building APIs with
+            REST framework.
+          </p>
+        </article>
+      </section>
+      <section id="development" class="main-section">
+        <header>Development</header>
+        <article>
+          <p>
+            See the
+            <a
+              href="https://www.django-rest-framework.org/community/contributing/"
+              class="link"
+              >Contribution guidelines</a
+            >
+            for information on how to clone the repository, run the test suite
+            and contribute changes back to REST Framework.
+          </p>
+        </article>
+      </section>
+      <section id="support" class="main-section">
+        <header>Support</header>
+        <article>
+          <p>
+            For support please see the
+            <a
+              href="https://groups.google.com/g/django-rest-framework"
+              class="link"
+            >
+              REST framework discussion group</a
+            >, try the <span class="highlight">#restframework</span> channel on
+            <span class="highlight">irc.libera.chat</span>, or raise a question
+            on
+            <a href="https://stackoverflow.com/" class="link">Stack Overflow</a
+            >, making sure to include the
+            <a
+              href="https://stackoverflow.com/questions/tagged/django-rest-framework"
+              class="link"
+              >'django-rest-framework'</a
+            >
+            tag.
+          </p>
+          <p>
+            For priority support please sign up for a
+            <a
+              href="https://fund.django-rest-framework.org/topics/funding/"
+              class="link"
+              >professional or premium sponsorship plan</a
+            >.
+          </p>
+        </article>
+      </section>
+      <section id="security" class="main-section">
+        <header>Security</header>
+        <article>
+          <p>
+            If you believe you’ve found something in Django REST framework which
+            has security implications, please
+            <strong>do not raise the issue in a public forum</strong>.
+          </p>
+          <p>
+            Send a description of the issue via email to
+            <a
+              href="mailto:rest-framework-security@googlegroups.com"
+              class="link"
+            >
+              rest-framework-security@googlegroups.com</a
+            >. The project maintainers will then work with you to resolve any
+            issues where required, prior to any public disclosure.
+          </p>
+        </article>
+      </section>
+      <section id="license" class="main-section">
+        <header>License</header>
+        <article>
+          <p>
+            Copyright © 2011-present,
+            <a href="https://www.encode.io/" class="link">Encode OSS Ltd</a>.
+            All rights reserved.
+          </p>
+          <p>
+            Redistribution and use in source and binary forms, with or without
+            modification, are permitted provided that the following conditions
+            are met:
+          </p>
+          <ul>
+            <li>
+              Redistributions of source code must retain the above copyright
+              notice, this list of conditions and the following disclaimer.
+            </li>
+            <li>
+              Redistributions in binary form must reproduce the above copyright
+              notice, this list of conditions and the following disclaimer in
+              the documentation and/or other materials provided with the
+              distribution.
+            </li>
+            <li>
+              Neither the name of the copyright holder nor the names of its
+              contributors may be used to endorse or promote products derived
+              from this software without specific prior written permission.
+            </li>
+          </ul>
+          <p>
+            THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+            "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+            LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+            FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+            COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+            INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+            BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+            LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+            CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+            LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+            ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+            POSSIBILITY OF SUCH DAMAGE.
+          </p>
+        </article>
+      </section>
+      <section id="reference" class="main-section">
+        <header>Reference</header>
+        <article>
+          <p>
+            All the documentation in this page is taken from
+            <a
+              href="https://www.django-rest-framework.org/"
+              class="link"
+              target="_blank"
+              >Django REST framework</a
+            >.
+          </p>
+        </article>
+      </section>
+      <footer>
+        Built with passion |
+        <a href="https://github.com/amaravindhan" target="_blank" class="link"
+          >Aravindhan Sundaram</a
+        >.
+      </footer>
     </main>
-</body>
+  </body>
 </html>
